@@ -1,1 +1,3 @@
-# This is my very first Rails application
+# Hello there
+
+This is my very first Rails application
