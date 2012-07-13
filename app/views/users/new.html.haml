@@ -2,6 +2,7 @@
   .span4.offset4
     %h1 Sign up
     = simple_form_for @user do |f|
+      = f.input :name, required: 'true'
       = f.input :email, required: 'true'
       = f.input :password
       = f.input :password_confirmation, required: 'true'
