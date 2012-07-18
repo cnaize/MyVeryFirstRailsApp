@@ -1,0 +1,10 @@
+- if signed_in?
+  .row
+    .span4.offset5
+      = link_to "New Story", new_story_path, class: "btn btn-large btn-primary"
+      = render 'story_feed'
+- else
+  .center.hero-unit
+    %h1 Welcome!
+    %h2 This is my very first rails app
+    = link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary"

@@ -1,8 +1,12 @@
 MyVeryFirstRailsApp::Application.routes.draw do
+
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
+  resources :stories, only: [:new, :create] do
+    get 'change', on: :member
+  end
 
-  root to: 'users#new'
+  root to: 'static_pages#home'
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'

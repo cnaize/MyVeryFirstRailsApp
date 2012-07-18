@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  responsible: MyString
+  descr: MyString
+  state: MyString
+
+two:
+  responsible: MyString
+  descr: MyString
+  state: MyString

@@ -1,0 +1,17 @@
+%li
+  Responsible:
+  = story_feed_item.responsible
+  %span.content
+    %h4= story_feed_item.descr
+  - case story_feed_item.state
+    - when 'new'
+      = link_to 'start', change_story_path(story_feed_item, do: 'start'), class: 'btn btn-mini'
+    - when 'started'
+      = link_to 'finish', change_story_path(story_feed_item, do: 'finish'), class: 'btn btn-mini btn-primary'
+    - when 'finished'
+      = link_to 'deliver', change_story_path(story_feed_item, do: 'deliver'), class: 'btn btn-mini btn-warning'
+    - when 'delivered'
+      = link_to 'accept', change_story_path(story_feed_item, do: 'accept'), class: 'btn btn-mini btn-success'
+      = link_to 'reject', change_story_path(story_feed_item, do: 'reject'), class: 'btn btn-mini btn-danger'
+    - when 'rejected'
+      = link_to 'restart', change_story_path(story_feed_item, do: 'restart'), class: 'btn btn-mini btn-primary'

@@ -4,7 +4,9 @@ gem 'rails', '3.2.5'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'bcrypt-ruby'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'state_machine'
+gem 'ruby-graphviz', require: 'graphviz'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
