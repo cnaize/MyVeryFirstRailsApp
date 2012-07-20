@@ -1,6 +1,12 @@
 
 class StoriesController < ApplicationController
 
+  def show
+    @story = current_user.stories.find(params[:id])
+    @comment = Comment.new
+    @feed_items = @story.comments
+  end
+
   def new
     @story = Story.new
     $users = []

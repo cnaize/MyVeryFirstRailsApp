@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  descr: MyString
+  story_id: 1
+
+two:
+  descr: MyString
+  story_id: 1

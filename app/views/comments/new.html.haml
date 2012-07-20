@@ -1,0 +1,6 @@
+.row
+  .span4.offset4
+    %h1 New comment
+    = simple_form_for ([@story, @comment]) do |f|
+      = f.input :descr, label: 'Comment'
+      = f.button :submit, 'Comment'

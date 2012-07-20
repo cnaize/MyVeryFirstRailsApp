@@ -1,0 +1,6 @@
+- if @feed_items.any?
+  %ol.feed
+    = render partial: 'shared/comment_feed_item', collection: @feed_items
+= simple_form_for ([@story, @comment]) do |f|
+  = f.input :descr, label: 'Comment'
+  = f.button :submit, 'Comment'

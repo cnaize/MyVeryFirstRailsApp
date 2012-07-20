@@ -2,8 +2,9 @@ MyVeryFirstRailsApp::Application.routes.draw do
 
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :stories, only: [:new, :create] do
+  resources :stories, only: [:show, :new, :create] do
     get 'change', on: :member
+    resources :comments, only: [:new, :create]
   end
 
   root to: 'static_pages#home'

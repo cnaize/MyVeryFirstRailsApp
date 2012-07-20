@@ -2,7 +2,7 @@
   Responsible:
   = story_feed_item.responsible
   %span.content
-    %h4= story_feed_item.descr
+    %h4= link_to story_feed_item.descr, story_feed_item
   - case story_feed_item.state
     - when 'new'
       = link_to 'start', change_story_path(story_feed_item, do: 'start'), class: 'btn btn-mini'
@@ -15,3 +15,4 @@
       = link_to 'reject', change_story_path(story_feed_item, do: 'reject'), class: 'btn btn-mini btn-danger'
     - when 'rejected'
       = link_to 'restart', change_story_path(story_feed_item, do: 'restart'), class: 'btn btn-mini btn-primary'
+  = link_to 'comment', new_story_comment_path(story_feed_item), class: 'btn btn-mini'

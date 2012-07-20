@@ -2,6 +2,7 @@ class Story < ActiveRecord::Base
   attr_accessible :descr, :responsible, :state
 
   belongs_to :user
+  has_many :comments, dependent: :destroy
 
   validates_presence_of :descr, on: :create
   validates_presence_of :responsible, on: :create
