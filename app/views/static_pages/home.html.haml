@@ -1,7 +1,9 @@
 - if signed_in?
   .row
-    .span4.offset5
+    .span4.offset4
       = link_to "New Story", new_story_path, class: "btn btn-large btn-primary"
+      = link_to "By name", sort_by_name_path, class: "btn btn-large"
+      = link_to "By state", sort_by_state_path, class: "btn btn-large"
       = render 'story_feed'
 - else
   .center.hero-unit

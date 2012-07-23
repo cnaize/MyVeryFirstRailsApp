@@ -1,5 +1,5 @@
 class Story < ActiveRecord::Base
-  attr_accessible :descr, :responsible, :state
+  attr_accessible :descr, :responsible
 
   belongs_to :user
   has_many :comments, dependent: :destroy
