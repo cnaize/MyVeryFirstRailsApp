@@ -2,6 +2,6 @@
   .span4.offset4
     %h1 New Story
     = simple_form_for @story do |f|
-      = f.input :responsible, collection: $users, required: 'true'
-      = f.input :descr, required: 'true'
+      = f.input :responsible, collection: @users, required: 'true'
+      = f.input :descr, required: 'true', label: 'Description'
       = f.button :submit, 'Create'

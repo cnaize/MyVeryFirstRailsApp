@@ -17,6 +17,9 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'database_cleaner'
 end
 # gem 'sqlite3'
 
